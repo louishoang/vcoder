@@ -3,7 +3,7 @@
   height: 7px;
 }
 
-.tingtong{
+.top-center{
   background: url(Dollarphotoclub_76103803.jpg) no-repeat top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -21,10 +21,39 @@
   border-radius: 5px;
   text-align: center;
   width: 70%;
-  margin-top: 120px;
+}
+
+.welcome-text{
+  @media #{$medium-up} {
+    margin-top: 120px;
+  }
 }
 
 .field-man{
-  height: 400px;
+  margin: 20px auto;
+  font-family: "Montserrat", sans-serif;
   font-size: 2em;
+  color: #2E3B4E;
+  text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
+}
+
+.field-man{
+  @media #{$small-only} {
+    font-size: 1.2em;
+  }
+}
+
+#start-application{
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#btn-sign-in{
+  padding: 10px 15px 10px 15px;
+  margin: 5px auto;
+}
+
+#sign-in-li{
+  padding: 0px 10px 0px 10px;
 }

@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title><%= content_for?(:title) ? yield(:title) : "VCoders BootCamp - Full-Stack Web Development with Ruby on Rails" %></title>
-
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <nav class="top-bar">
+    <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
         <!-- Title Area -->
         <li class="name">
-          <h1><a href="#">Top Bar Title </a></h1>
+          <h1><a href="#">Vcoder Bootcamp </a></h1>
         </li>
         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
         <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -40,8 +40,8 @@
           <li><a href="#">FAQ</a>
           <li class="divider"></li>
           <li class="divider show-for-small"></li>
-          <li>
-            <a class="button" href="#">SIGN IN</a>
+          <li id="sign-in-li">
+            <a class="large button radius" id="btn-sign-in" href="#">SIGN IN</a>
           </li>
         </ul>
       </section>
