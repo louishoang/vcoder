@@ -1,0 +1,13 @@
+.sub-top{
+  background-color: #1C2225;
+  height: 7px;
+}
+
+.tingtong{
+  background: url(vcoder.jpg) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  height: 500px;
+}
