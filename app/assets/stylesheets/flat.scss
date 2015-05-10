@@ -124,6 +124,20 @@
   box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
 }
 
+.avatar img{
+  @media #{$medium-only} {
+    width: 140px;
+    height: 140px;
+    margin: 0px 0px 0px -43px;
+  }
+  @media #{$small-only} {
+    margin-left: 50px;
+  }
+  @media only screen and (max-width: 450px) {
+    margin-left: -30px;
+  }
+}
+
 .ul--no-decor{
   list-style-type: none;
 }
