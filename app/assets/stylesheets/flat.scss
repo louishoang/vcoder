@@ -203,6 +203,18 @@
   color: white;
 }
 
+.foot-nav-link li{
+  display: block;
+  border-left: 6px solid rgb(64,73,80);
+  padding: 8px 0 8px 10px;
+  color: white;
+}
+
+.foot-nav-link li:hover{
+  color: #EA4A3C;
+  border-left: 6px solid rgb(234,74,60);
+}
+
 .icon-space{
   margin-left: 10px;
 }

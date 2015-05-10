@@ -102,22 +102,38 @@
 </div>
 <footer class="small-12 medium-12 columns l-footer">
   <div class="small-12 medium-6 columns x2-margin-top">
-    <ul class="inline-list ul--no-decor foot-nav">
-      <li>
-        <i class="fa fa-question-circle"><span class='icon-space'>&nbsp;FAQ</span></i>
-
-      </li>
-      <li>
-        <i class="fa fa-newspaper-o"><span class='icon-space'>BLOG</span></i>
-      </li>
-      <li>
-        <i class="fa fa-unlock-alt"><span class='icon-space'>&nbsp;&nbsp;PRIVACY</span></i>
-      </li>
-    </ul>
-    <div class="small-12 large-12 columns text-white">
-      <i class="fa fa-twitter-square"></i><i class="fa fa-facebook-square icon-space"></i><i class="fa fa-google-plus icon-space"></i>
+    <div class="small-12 medium-6 columns">
+      <ul class="ul--no-decor foot-nav foot-nav-link">
+        <h4 class="text-grey">Prospective students</h4>
+        <li>
+          <i class="fa fa-check-square"><span class='icon-space'>&nbsp;APPLY NOW</span></i>
+        </li>
+        <li>
+          <i class="fa fa-question-circle"><span class='icon-space'>&nbsp;FAQ</span></i>
+        </li>
+        <li>
+          <i class="fa fa-unlock-alt"><span class='icon-space'>&nbsp;&nbsp;PRIVACY</span></i>
+        </li>
+      </ul>
     </div>
-    <div class="small-12 large-12 columns">
+    <div class="small-12 medium-6 columns">
+      <h4 class="text-grey icon-space">&nbsp;Connect</h4>
+      <ul class="ul--no-decor foot-nav foot-nav-link">
+        <li>
+          <i class="fa fa-newspaper-o"><span class='icon-space'>BLOG</span></i>
+        </li>
+        <li>
+          <i class="fa fa-facebook-square"><span class='icon-space'>FACEBOOK</span></i>
+        </li>
+        <li>
+          <i class="fa fa-twitter-square"><span class='icon-space'>TWITTER</span></i>
+        </li>
+        <li>
+          <i class="fa fa-google-plus"><span class='icon-space'>GOOGLE +</span></i>
+        </li>
+      </ul>
+    </div>
+    <div class="small-12 large-12 columns x2-margin-top">
       <span class="text-white">COPYRIGHT © 2015 VCoder Bootcamp</span>
     </div>
   </div>
@@ -130,7 +146,7 @@
         <%= text_field_tag 'name',
                              nil,
                             placeholder: 'Name...' %>
-        <%= email_field_tag 'email', nil, placeholder: 'your_email@vcoders.com' %>
+        <%= email_field_tag 'email', nil, placeholder: 'Email@vcoders.com' %>
         <%= text_area_tag 'messages', nil, placeholder: "Message...", rows: 3, cols: 25 %>
         <%= button_tag "Send", class: "small button small-3 right" %>
       <% end %>
