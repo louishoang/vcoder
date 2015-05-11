@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row panel white-bg text-center x2-margin-top panel-radius">
     <div class="eight columns">
-      <h1 class="x2-margin-top">Apply to VCoder BootCamp</h1>
+      <h1 class="x2-margin-top apply-text text-dark-grey">Apply To VCoder BootCamp</h1>
       <%= form_for @prospect, :url => prospects_path,:html => { method: "POST", class: "small-12 medium-10 medium-offset-1 columns x2-margin-top form--apply"} do |form| %>
         <div class="row collapse">
           <% if @prospect.errors.any? %>
@@ -78,7 +78,7 @@
           </div>
           <div class="small-9 large-11 columns">
             <%= form.text_area :comment, :rows => 5,
-                      placeholder: "Tell us more about your background; what are you looking for from the course" %>
+                      placeholder: "Tell us more about your background; What are you looking for from this course" %>
           </div>
         </div>
         <div class="row collapse">

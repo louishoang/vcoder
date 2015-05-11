@@ -6,6 +6,7 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "VCoders BootCamp - Full-Stack Web Development with Ruby on Rails" %></title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
@@ -17,16 +18,14 @@
         <ul class="title-area">
           <!-- Title Area -->
           <li class="name">
-            <h1><a href="#">Vcoder Bootcamp </a></h1>
+            <h1><a href="/">Vcoder Bootcamp </a></h1>
           </li>
-          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
           <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
-
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
-            <li><a href="#">HOME</a>
+            <li><a href="/">HOME</a>
             <li class="divider"></li>
             <li class="divider show-for-small"></li>
             <li><a href="#">THE PROGRAM</a>
@@ -57,5 +56,10 @@
     <% end %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
+    <% unless @unset_footer.present? %>
+      <div class="small-12 large-12 columns l-footer m-footer">
+        <span class="text-grey">© 2015 VCoder Bootcamp. All rights reserved.</span>
+      </div>
+    <% end %>
   </body>
 </html>

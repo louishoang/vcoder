@@ -209,6 +209,15 @@
   background-color: #333333;
 }
 
+.m-footer{
+  margin-top: 70px !important;
+  height: 70px;
+  text-align: center;
+  padding: 27px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
 .text-grey{
   color: #808080;
 }
@@ -253,4 +262,24 @@
   -webkit-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.75);
   -moz-box-shadow:    0px 0px 12px 0px rgba(50, 50, 50, 0.75);
   box-shadow:         0px 0px 12px 0px rgba(50, 50, 50, 0.75);
+}
+
+.apply-text{
+  font-family: "Lato", sans-serif;
+}
+
+.container{
+  height: 100%;
+}
+
+.text-dark-grey{
+  color: #616161 !important;
+}
+
+#thanks-prospect{
+  margin-top: 15%;
+}
+
+.l-copyright{
+  margin-top: 80px;
 }

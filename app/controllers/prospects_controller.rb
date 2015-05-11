@@ -11,6 +11,7 @@ class ProspectsController < ApplicationController
     if @prospect.save
       redirect_to thank_you_prospects_path
     else
+      flash[:succes] = "Please check your input for the error(s) below."
       render "new"
     end
   end
