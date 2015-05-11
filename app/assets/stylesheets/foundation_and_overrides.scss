@@ -624,17 +624,17 @@ $body-bg: #F4F4F4;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
-// $input-font-size: rem-calc(14);
-// $input-bg-color: $white;
+$input-font-size: rem-calc(18);
+// $input-bg-color: #def0f4;
 // $input-focus-bg-color: scale-color($white, $lightness: -2%);
-// $input-border-color: scale-color($white, $lightness: -20%);
-// $input-focus-border-color: scale-color($white, $lightness: -40%);
-// $input-border-style: solid;
-// $input-border-width: 1px;
-// $input-border-radius: $global-radius;
+// $input-border-color: scale-color(#def0f4, $lightness: -20%);
+$input-focus-border-color: scale-color(#def0f4, $lightness: -40%);
+$input-border-style: solid;
+$input-border-width: 1px;
+$input-border-radius: 1px;
 // $input-disabled-bg: $gainsboro;
 // $input-disabled-cursor: $cursor-default-value;
-// $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+$input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 
 // We use these to style the fieldset border and spacing.
 // $fieldset-border-style: solid;

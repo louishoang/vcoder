@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="row panel white-bg text-center x2-margin-top panel-radius">
+    <div class="eight columns">
+      <h1 class="x2-margin-top">Apply to VCoder BootCamp</h1>
+      <%= form_for @prospect, :url => prospects_path,:html => { method: "POST", class: "small-12 medium-10 medium-offset-1 columns x2-margin-top form--apply"} do |form| %>
+        <div class="row collapse">
+          <% if @prospect.errors.any? %>
+          <ul class="ul--no-decor">
+            <% @prospect.errors.full_messages.each do |msg| %>
+              <li class="text-red"><%= msg %></li>
+            <% end %>
+          </ul>
+          <% end %>
+        </div>
+        <%= form.text_field :first_name, :required => true, placeholder: 'First Name' %>
+        <%= form.text_field :last_name, :required => true, placeholder: 'Last Name' %>
+        <div class="row collapse">
+          <div class="small-3 large-1 columns">
+            <span class="prefix">
+              <i class="fa fa-circle-thin fa-lg seventy-fade"></i>
+            </span>
+          </div>
+          <div class="small-9 large-11 columns">
+            <%= form.select("gender",
+                           Prospect.gender_choices,
+                            {prompt: 'Select Gender'}) %>
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-3 large-1 columns">
+            <span class="prefix icon-padding">
+              <h4 class="seventy-fade">@</h4>
+            </span>
+          </div>
+          <div class="small-9 large-11 columns">
+            <%= form.email_field :email, :required => true, placeholder: 'Email' %>
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-3 large-1 columns">
+            <span class="prefix icon-padding">
+              <i class="fa fa-phone fa-2x seventy-fade"></i>
+            </span>
+          </div>
+          <div class="small-9 large-11 columns">
+            <%= form.text_field :phone_number,
+                                 placeholder: 'Phone Number' %>
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-3 large-1 columns">
+            <span class="prefix icon-padding">
+              <i class="fa fa-skype fa-2x seventy-fade"></i>
+            </span>
+          </div>
+          <div class="small-9 large-11 columns">
+            <%= form.text_field :skype, :required => true,
+                                 placeholder: 'Skype ID. We will use this for interview' %>
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-3 large-1 columns">
+            <span class="prefix icon-padding">
+              <i class="fa fa-credit-card fa-2x seventy-fade"></i>
+            </span>
+          </div>
+          <div class="small-9 large-11 columns">
+            <%= form.select("payment_type",
+                           Prospect.payment_types,
+                            {prompt: 'Payment Type', :required => true,}) %>
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-3 large-1 columns">
+            <span class="prefix icon-padding">
+              <i class="fa fa-comment fa-2x seventy-fade"></i>
+            </span>
+          </div>
+          <div class="small-9 large-11 columns">
+            <%= form.text_area :comment, :rows => 5,
+                      placeholder: "Tell us more about your background; what are you looking for from the course" %>
+          </div>
+        </div>
+        <div class="row collapse">
+          <%= form.submit "Submit Application", class: "button x2-margin-top" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
