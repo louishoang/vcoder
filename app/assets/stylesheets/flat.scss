@@ -283,3 +283,13 @@
 .l-copyright{
   margin-top: 80px;
 }
+
+.link--no-decor{
+  text-decoration: none;
+  color: inherit;
+}
+
+.link--no-decor:hover{
+  text-decoration: none;
+  color: inherit;
+}

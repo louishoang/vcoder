@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+  post 'contact_us' => 'home#contact_us', as: :contact_us
   resources :prospects do
     collection do
       get :thank_you

@@ -106,7 +106,9 @@
       <ul class="ul--no-decor foot-nav foot-nav-link">
         <h4 class="text-grey">Prospective Students</h4>
         <li>
-          <i class="fa fa-check-square"><span class='icon-space'>&nbsp;APPLY NOW</span></i>
+          <i class="fa fa-check-square">
+            <a href="<%= new_prospect_path %>" class='icon-space link--no-decor'>&nbsp;APPLY NOW</a>
+          </i>
         </li>
         <li>
           <i class="fa fa-question-circle"><span class='icon-space'>&nbsp;FAQ</span></i>
@@ -142,7 +144,10 @@
       <h3 class="text-grey">
         <i class="fa fa-envelope"></i>&nbsp;Drop us a line and we'll be in touch shortly!
       </h3>
-      <%= form_tag('', class: "x2-margin-top") do %>
+      <%= form_tag({}, {id: "contact-us-form",
+                        method: "post",
+                       "data-url" => contact_us_path,
+                        class: "x2-margin-top form-ajax"}) do %>
         <%= text_field_tag 'name',
                              nil,
                             placeholder: 'Name...' %>

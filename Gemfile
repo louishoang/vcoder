@@ -37,6 +37,7 @@ gem 'devise'
 
 group :development, :test do
   gem 'pry-rails'
+  gem 'dotenv-rails'
 end
 
 # Use ActiveModel has_secure_password
