@@ -5,7 +5,11 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+
   post 'contact_us' => 'home#contact_us', as: :contact_us
+  get 'privacy_policy' => 'home#privacy_policy', as: :privacy_policy
+  get 'faq' => 'home#faq', as: :faq
+
   resources :prospects do
     collection do
       get :thank_you

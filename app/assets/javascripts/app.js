@@ -1,4 +1,5 @@
 $(function(){
+  // Form ajax start
   $(document).on("submit", ".form-ajax", function(e){
     e.preventDefault();
     $this = $(e.target);
@@ -26,4 +27,21 @@ $(function(){
       }
     });
   });
+  // Accordion
+
+  $(document).on("click", ".accordion-navigation", function(e){
+    $item = $(e.target).parent();
+    $plusMinus = $item.find(".plusminus");
+    if($item.hasClass("active")){
+      $plusMinus.text("-");
+    }else{
+      $plusMinus.text("+");
+    }
+  });
 });
+
+
+
+
+
+

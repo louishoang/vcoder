@@ -246,6 +246,10 @@
   margin-left: 10px;
 }
 
+.icon-space-right{
+  margin-right: 10px;
+}
+
 .text-red{
   color: #E12A27 !important;
 }
@@ -292,4 +296,23 @@
 .link--no-decor:hover{
   text-decoration: none;
   color: inherit;
+}
+
+.text-blue{
+  color: #0064D2 !important;
+}
+
+#faq .accordion .accordion-navigation a{
+  background: none !important;
+  font-weight: bold;
+  color: #3D9EC6;
+}
+
+#faq .accordion .accordion-navigation > .content{
+  line-height: 1.5em;
+  padding-left: 25px;
+}
+
+#faq dl{
+  line-height: 0.5em;
 }
