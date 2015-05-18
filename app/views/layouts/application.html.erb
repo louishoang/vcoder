@@ -7,6 +7,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "VCoders BootCamp - Full-Stack Web Development with Ruby on Rails" %></title>
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
@@ -28,16 +29,16 @@
             <li><a href="/">HOME</a>
             <li class="divider"></li>
             <li class="divider show-for-small"></li>
-            <li><a href="#">THE PROGRAM</a>
+            <li><a href="<%= the_program_path %>">THE PROGRAM</a>
             <li class="divider"></li>
             <li class="divider show-for-small"></li>
-            <li><a href="#">CURRICULUM</a>
+            <li><a href="<%= curriculum_path %>">CURRICULUM</a>
             <li class="divider"></li>
             <li class="divider show-for-small"></li>
-            <li><a href="#">TUITON</a>
+            <li><a href="<%= tuition_path %>">TUITION</a>
             <li class="divider"></li>
             <li class="divider show-for-small"></li>
-            <li><a href="#">FAQ</a>
+            <li><a href="<%= faq_path %>">FAQ</a>
             <li class="divider"></li>
             <li class="divider show-for-small"></li>
             <li id="sign-in-li">

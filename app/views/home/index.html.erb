@@ -43,7 +43,7 @@
       </div>
     </div>
     <div class="small-12 medium-6 medium-offset-3 columns">
-      <a href="<%= new_prospect_path %>" class="small button expand" id="start-application">
+      <a href="<%= new_prospect_path %>" class="small button expand radius" id="start-application">
         START AN APPLICATION</a>
     </div>
   </div>
@@ -112,7 +112,7 @@
         </li>
         <li>
           <i class="fa fa-question-circle">
-            <a href="<%= privacy_policy_path %>" class='icon-space link--no-decor'>&nbsp;&nbsp;FAQ</a></i>
+            <a href="<%= faq_path %>" class='icon-space link--no-decor'>&nbsp;&nbsp;FAQ</a></i>
         </li>
         <li>
           <i class="fa fa-unlock-alt">
@@ -156,7 +156,7 @@
                             placeholder: 'Name...' %>
         <%= email_field_tag 'email', nil, placeholder: 'Email@vcoders.com' %>
         <%= text_area_tag 'messages', nil, placeholder: "Message...", rows: 3, cols: 25 %>
-        <%= button_tag "Send", class: "small button small-3 right" %>
+        <%= button_tag "Send", class: "small button small-3 right radius" %>
       <% end %>
     </div>
   </div>

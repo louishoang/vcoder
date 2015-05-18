@@ -1,6 +1,4 @@
 class HomeController < ApplicationController
-  include ApplicationHelper
-
   def index
     unset_footer
   end
@@ -14,5 +12,18 @@ class HomeController < ApplicationController
   end
 
   def faq
+  end
+
+  def tuition
+    @cohorts = Cohort.where("status = ?", Cohort::STATUS_ENROLLING)
+                      .order("start_at DESC")
+                      .take(2)
+
+  end
+
+  def the_program
+  end
+
+  def curriculum
   end
 end

@@ -263,9 +263,9 @@
 
 .panel-radius{
   border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    0px 0px 12px 0px rgba(50, 50, 50, 0.75);
-  box-shadow:         0px 0px 12px 0px rgba(50, 50, 50, 0.75);
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 0px 6px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 0px 6px 0px rgba(50, 50, 50, 0.75);
 }
 
 .apply-text{
@@ -278,6 +278,10 @@
 
 .text-dark-grey{
   color: #616161 !important;
+}
+
+.text-dark-blue{
+  color: #052133 !important;
 }
 
 #thanks-prospect{
@@ -315,4 +319,98 @@
 
 #faq dl{
   line-height: 0.5em;
+}
+
+
+.border-left{
+  border-left: 1px solid black;
+}
+
+.cohort-name{
+  font-weight: 300;
+}
+
+.enrolling{
+  color: #3D9EC6;
+  font-style: italic;
+  font-weight: 200;
+}
+
+.button-orange{
+  background-color: #F15A24;
+  color: white;
+  font-weight: bold;
+}
+
+.button-orange:hover{
+  background-color: #CC4A23;
+}
+
+#payment-choice{
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.plan-price{
+  font-size: 5em;
+  font-weight: 300;
+  letter-spacing: -3px;
+  color: #27415A;
+}
+#our-program-header-image{
+  height: 290px;
+}
+
+#the-program-img{
+  margin-top: 30px;
+  zoom: 190%;
+}
+
+#our-program{
+  background-color: #629DD0;
+}
+
+#our-program-h1{
+  margin-top: 100px;
+  font-size: 3.5em;
+  color: white;
+  font-family: "Merriweather",Georgia,serif;
+}
+
+#about-vcoder {
+  border-bottom: 1px solid rgba(5,33,51,.25);
+}
+
+.description-style{
+  font-size: 1.20em;
+  font-family: "Merriweather", "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  font-weight: 350;
+  opacity: 0.8;
+}
+
+#program-2nd-row{
+  border-bottom: 1px solid rgba(5,33,51,.25);
+}
+
+#who-we-teach{
+  font-family: "Merriweather",Georgia,serif;
+  font-weight: 300;
+}
+
+#vcoder-bc{
+  color: black;
+  zoom: 110%;
+  font-weight: bolder;
+}
+
+#program-student{
+  margin-left: 60px;
+}
+
+.text-black{
+  color: black;
+  font-weight: bolder;
 }

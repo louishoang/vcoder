@@ -9,12 +9,17 @@ Rails.application.routes.draw do
   post 'contact_us' => 'home#contact_us', as: :contact_us
   get 'privacy_policy' => 'home#privacy_policy', as: :privacy_policy
   get 'faq' => 'home#faq', as: :faq
+  get 'tuition' => 'home#tuition', as: :tuition
+  get 'curriculum' => 'home#curriculum', as: :curriculum
+  get 'the_program' => 'home#the_program', as: :the_program
 
   resources :prospects do
     collection do
       get :thank_you
     end
   end
+
+  resources :cohorts
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

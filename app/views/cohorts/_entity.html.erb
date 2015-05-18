@@ -1,0 +1,13 @@
+<div class="small-12 large-6 columns text-center <%= 'border-left' if index > 0 %>">
+  <h2 class="cohort-name"><%= entity.name %></h2>
+  <div><span class="plan-price">$400</span>/month</div>
+  <div class="seventy-fade">
+    Four mentor meetings each week
+  </div>
+  <div class="cohort-start-at seventy-fade">
+    Class starts: <%= entity.start_at.strftime("%A, %B %d, %Y") %>.
+  </div>
+  <div class="enrolling">
+    Currently <%= entity.status %>
+  </div>
+</div>

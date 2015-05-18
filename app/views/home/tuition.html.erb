@@ -1,0 +1,24 @@
+<div class="container">
+  <h1 class="x2-margin-top apply-text text-dark-grey text-center">
+    TUITION
+  </h1>
+  <div class="row panel white-bg panel-radius">
+    <div class="small-12 large-10 large-offset-1 columns">
+      <% if @cohorts.present? %>
+        <% @cohorts.reverse.each_with_index do |cohort, index| %>
+          <%= render "cohorts/entity", view_mode: :div,
+                                       entity: cohort,
+                                       index: index %>
+        <% end %>
+      <% else %>
+        Sorry, our class are full, please check back next time
+      <% end %>
+    </div>
+    <div class="small-12 large-12 columns x2-margin-top text-center"
+        id="tuiton-2nd">
+      <div id="payment-choice"> We offer two payment plans — $1,850 upfront OR five payments of $400 per month.</div>
+      <a href="<%= new_prospect_path %>" class="button medium button-orange radius">Enroll Now</a>
+    </div>
+  </div>
+
+</div>
