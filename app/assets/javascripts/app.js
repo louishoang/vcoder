@@ -38,6 +38,8 @@ $(function(){
       $plusMinus.text("+");
     }
   });
+
+
 });
 
 
