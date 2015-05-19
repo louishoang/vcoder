@@ -35,7 +35,7 @@ gem "font-awesome-rails"
 #authentication with devise
 gem 'devise'
 
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'pry-rails'
