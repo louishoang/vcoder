@@ -14,18 +14,22 @@
   </head>
 
   <body>
-    <div class="contain-to-grid fixed">
+    <div class="fixed">
       <nav class="top-bar sticky" data-topbar role="navigation">
         <ul class="title-area">
           <!-- Title Area -->
           <li class="name">
-            <h1><a href="/">Vcoder Bootcamp </a></h1>
+            <h1>
+              <a href="/"><%= image_tag "vcoder.png",
+                                         id: "main-logo" %>
+              </a>
+            </h1>
           </li>
           <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
         <section class="top-bar-section">
           <!-- Right Nav Section -->
-          <ul class="right">
+          <ul class="right" id="top-right">
             <li><a href="/">HOME</a>
             <li class="divider"></li>
             <li class="divider show-for-small"></li>
