@@ -316,6 +316,9 @@
 
 #faq dl{
   line-height: 0.5em;
+  @media #{$small-only} {
+    line-height: 1.5em;
+  }
 }
 
 
