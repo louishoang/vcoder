@@ -1,3 +1,11 @@
+#main-logo{
+  width: 130px;
+
+  @media #{$large-up} {
+    margin-left: 80px ;
+  }
+}
+
 .sub-top{
   background-color: #1C2225;
   height: 7px;
@@ -102,13 +110,13 @@
 
 .why-should--headline{
   color: #808080;
-  font-size: 35px;
+  font-size: 2.2em;
   font-weight: 400;
   font-family: "Merriweather",Georgia,serif;
 }
 
 .text-center{
-  text-align: center;
+  text-align: center !important;
 }
 
 .avatar--medium{
