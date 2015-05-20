@@ -1,17 +1,17 @@
 <div class="top-center">
-  <div class="small-12 large-8 large-offset-2 columns welcome-text">
+  <div class="small-12 medium-12 large-8 large-offset-2 columns welcome-text">
     <div class="small-12 large-12 columns field-man">
       Full-Stack Web Development with Ruby on Rails
     </div>
     <div class="small-12 large-12 columns">
-      <div class="small-12 large-4 columns">
-        <div class="panel panel-radius custom-panel">
+      <div class="small-12 medium-4 large-4 columns">
+        <div class="panel panel-radius custom-panel hp-panel">
           <h5 class="welcome-page-h5">Front End</h5>
           <%= image_tag "bootstrap-jquery-html5-css3.png" %>
         </div>
       </div>
-      <div class="small-12 large-4 columns">
-        <div class="panel panel-radius custom-panel">
+      <div class="small-12 medium-4 large-4 columns">
+        <div class="panel panel-radius custom-panel hp-panel">
           <h5 class="welcome-page-h5">Back End</h5>
           <div>
             <div class="small-6 large-6 columns">
@@ -26,8 +26,8 @@
           </div>
         </div>
       </div>
-      <div class="small-12 large-4 columns">
-        <div class="panel panel-radius custom-panel">
+      <div class="small-12 medium-4 large-4 columns">
+        <div class="panel panel-radius custom-panel hp-panel">
           <h5 class="welcome-page-h5">Tools</h5>
             <div class="row">
               <div class="small-6 large-6 columns">
@@ -53,20 +53,17 @@
 <div class="small-12 large-12 columns zigzag container2">
   <div class="small-12 large-10 large-offset-1 columns x2-margin-top x2-margin-bottom text-center">
     <h2 class="why-should--headline">Why Should You Choose This Course</h2>
-    <div class="row-fluid">
-      <div class="small-12 large-4 columns">
-        <div class="avatar avatar--medium small-12 columns">
-          <%= image_tag "realapp.jpeg", alt: "Build real time app" %>
-        </div>
+    <div class="small-12 large-12 columns">
+      <div class="small-12 large-4 columns text-center">
+        <%= image_tag "realapp.jpeg", alt: "Build real time app",
+                                    class: "avatar avatar--medium" %>
         <div class="small-12 columns x2-margin-top">
           <h4 class="avatar-header">Build Real Application</h4>
           <p class="sub-avatar">Through hands on projects, we train you how to work individually as well as pair programming, applying agile methodology and test driven development to deploy industry level web applications.</p>
         </div>
       </div>
-      <div class="small-12 large-4 columns">
-        <div class="avatar avatar--medium small-12 columns">
-          <%= image_tag "hybridclass.jpeg", alt: "The Best of Both World - Hybrid Class" %>
-        </div>
+      <div class="small-12 large-4 columns text-center">
+        <%= image_tag "hybridclass.jpeg", alt: "The Best of Both World - Hybrid Class", class: "avatar avatar--medium" %>
         <div class="small-12 columns x2-margin-top">
           <h4 class="avatar-header">The Best of Both World  - Hybrid Class</h4>
           <ul class="ul--no-decor sub-avatar">
@@ -76,10 +73,9 @@
           </ul>
         </div>
       </div>
-      <div class="small-12 large-4 columns">
-        <div class="avatar avatar--medium small-12 columns">
-          <%= image_tag "support.jpeg", alt: "Unlimited support" %>
-        </div>
+      <div class="small-12 large-4 columns text-center">
+        <%= image_tag "support.jpeg", alt: "Unlimited support",
+                                    class: "avatar avatar--medium" %>
         <div class="small-12 columns x2-margin-top">
           <h4 class="avatar-header">Unlimited Support</h4>
           <ul class="ul--no-decor sub-avatar">
@@ -96,15 +92,17 @@
     </div>
   </div>
 </div>
-<div class="small-12 large-12 columns nopadding" id="community">
+<div class="small-12 large-12 columns nopadding text-center" id="community">
   <%= image_tag "friends.jpeg", alt: "Life Time Experience" %>
-  <div class="rotate text-rotate small-12 medium-12 large-4 columns">
-    "Life-Time Relationship With Other Passionate Vcoders" | "Supportive And Health-Oriented Environment, ALWAYS" | "Actively Engage In Local Meetups And Activites" | "APPLY NOW"
+  <div class="small-12 large-5 columns">
+    <span class="rotate text-rotate">
+      "Life-Time Relationship With Other Passionate Vcoders" | "Supportive And Health-Oriented Environment, ALWAYS" | "Actively Engage In Local Meetups And Activites" | "APPLY NOW"
+    </span>
   </div>
 </div>
 <footer class="small-12 large-12 columns l-footer">
   <div class="small-12 large-6 columns x2-margin-top">
-    <div class="small-12 large-6 columns">
+    <div class="small-6 large-6 columns">
       <ul class="ul--no-decor foot-nav foot-nav-link">
         <h4 class="text-grey">Prospective Students</h4>
         <li>
@@ -123,7 +121,7 @@
         </li>
       </ul>
     </div>
-    <div class="small-12 large-6 columns">
+    <div class="small-6 large-6 columns">
       <h4 class="text-grey icon-space">&nbsp;Connect</h4>
       <ul class="ul--no-decor foot-nav foot-nav-link">
         <li>
@@ -140,7 +138,7 @@
         </li>
       </ul>
     </div>
-    <div class="small-12 large-12 columns l-copyright">
+    <div class="small-12 large-12 columns l-copyright" id="cp-right">
       <div class="text-white">© 2015 VCoder Bootcamp. All rights reserved.</div>
     </div>
   </div>
