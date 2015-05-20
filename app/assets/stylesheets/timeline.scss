@@ -20,7 +20,7 @@
 }
 
 .timeline {
-  position: relative;
+  // position: relative;
   padding: 30px 0 50px 0;
   font-family: "Merriweather",Georgia,serif;
   list-style-type: none;
@@ -28,7 +28,7 @@
 
 .timeline:before {
   content: '';
-  position: absolute;
+  // position: absolute;
   width: 5px;
   height: 100%;
   top: 0;
@@ -40,7 +40,14 @@
   position: relative;
   margin-bottom: 30px;
   padding-right: 40px;
+
+  @media #{$small-only} {
+    padding-bottom: 30px;
+  }
 }
+
+
+
 
 .thumb {
   position: absolute;
