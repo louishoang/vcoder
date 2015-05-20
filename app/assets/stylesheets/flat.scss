@@ -58,8 +58,13 @@
 
 .field-man{
   @media #{$small-only} {
-    font-size: 1.2em;
+    font-size: 0.9em;
   }
+}
+
+#first-pan img{
+  height: 84px;
+  margin-bottom: 15px;
 }
 
 #start-application{
@@ -452,6 +457,6 @@
 
 .hp-panel{
   @media #{$small-only} {
-    zoom: 0.7;
+    zoom: 0.6;
   }
 }
