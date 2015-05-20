@@ -358,12 +358,15 @@
   color: #27415A;
 }
 #our-program-header-image{
-  height: 290px;
+  @media #{$large-only} {
+    height: 290px;
+  }
 }
 
 #the-program-img{
   margin-top: 30px;
   zoom: 190%;
+  width: 171px;
 }
 
 #our-program{
@@ -371,10 +374,16 @@
 }
 
 #our-program-h1{
-  margin-top: 100px;
   font-size: 3.5em;
   color: white;
   font-family: "Merriweather",Georgia,serif;
+  @media #{$large-only} {
+    margin-top: 100px;
+    float: left;
+  }
+  @media #{$small-only} {
+    font-size: 2em;
+  }
 }
 
 #about-vcoder {
