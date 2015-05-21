@@ -61,6 +61,17 @@
     <% end %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-63210479-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
     <% unless @unset_footer.present? %>
       <div class="small-12 large-12 columns l-footer m-footer">
         <span class="text-grey">© 2015 VCoder Bootcamp. All rights reserved.</span>
