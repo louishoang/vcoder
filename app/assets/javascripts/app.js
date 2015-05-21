@@ -1,4 +1,8 @@
 $(function(){
+  console.log("================================");
+  console.log("Interested in teaching Rails?");
+  console.log("We are looking for talents on RoR, Jquery");
+  console.log("================================");
   // Form ajax start
   $(document).on("submit", ".form-ajax", function(e){
     e.preventDefault();
@@ -43,6 +47,13 @@ $(function(){
   $(".eq-height").matchHeight({
     byRow: true,
     property: 'height'
+  });
+
+  // text rotator on index
+  $(".rotate").textrotator({
+    animation: "flipCube", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
+    separator: "|", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
+    speed: 5000 // How many milliseconds until the next word show.
   });
 
 
