@@ -22,6 +22,10 @@
   width: 100%;
 }
 
+.ct-h2{
+  font-family: "Merriweather",Georgia,serif;
+}
+
 .welcome-text{
   background: none repeat scroll 0 0 transparent;
   background-color: rgba(255,255,255,0.7);
@@ -330,6 +334,10 @@
   border-left: 1px solid black;
 }
 
+.border-right{
+  border-right: 1px solid black;
+}
+
 .cohort-name{
   font-weight: 300;
 }
@@ -458,5 +466,33 @@
 .hp-panel{
   @media #{$small-only} {
     zoom: 0.6;
+  }
+}
+
+.help_block{
+  font-size: 0.8em;
+}
+
+.form-custom label{
+  font-size: 1.2em;
+  color: #616161 !important;
+}
+
+#new-account{
+  margin-left: -10px;
+}
+
+.vertical-align{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#inner-new-account{
+  margin-top: 30px;
+  position: relative;
+  @media #{$large-only} {
+    top: 20%;
+    transform: translateY(-20%);
   }
 }

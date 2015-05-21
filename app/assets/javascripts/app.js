@@ -39,6 +39,13 @@ $(function(){
     }
   });
 
+  // equal heigh div;
+  $(".eq-height").matchHeight({
+    byRow: true,
+    property: 'height'
+  });
+
+
 
 });
 
