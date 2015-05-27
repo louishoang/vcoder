@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= requireangular
+//= requireangular-route
+//= requireangular-resource
 //= require_tree .
 
 $(function(){
