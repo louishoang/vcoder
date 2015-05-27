@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'tuition' => 'home#tuition', as: :tuition
   get 'curriculum' => 'home#curriculum', as: :curriculum
   get 'the_program' => 'home#the_program', as: :the_program
+  get'/dashboard'=>'classroom#dashboard'
 
   resources :prospects do
     collection do
