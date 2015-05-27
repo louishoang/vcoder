@@ -10,7 +10,47 @@
     <%= stylesheet_link_tag "application", :media => "all" %>
   </head>
   <body>
-
+     <div class="fixed">
+      <nav class="top-bar sticky" data-topbar role="navigation">
+        <ul class="title-area">
+          <!-- Brand Area -->
+          <li class="name">
+            <h1>
+              <a href="/"><%= image_tag "white2.png", id: "main-logo", alt: "Vcoder" %>
+              </a>
+            </h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right" id="top-right">
+            <li><a href="/">HOME</a>
+            <li class="divider"></li>
+            <li class="divider show-for-small"></li>
+            <li><a href="<%= the_program_path %>">THE PROGRAM</a>
+            <li class="divider"></li>
+            <li class="divider show-for-small"></li>
+            <li><a href="<%= curriculum_path %>">CURRICULUM</a>
+            <li class="divider"></li>
+            <li class="divider show-for-small"></li>
+            <li><a href="<%= tuition_path %>">TUITION</a>
+            <li class="divider"></li>
+            <li class="divider show-for-small"></li>
+            <li><a href="<%= faq_path %>">FAQ</a>
+            <li class="divider"></li>
+            <li class="divider show-for-small"></li>
+            <li id="sign-in-li">
+              <%= link_to "SIGN OUT",
+                           destroy_user_session_path,
+                            method: :delete,
+                            class: "large button radius",
+                            id: "btn-sign-in" %>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </div>
     <div class="container">
       <h1>WSUP YO!</h1>
       <div data-ng-view></div>

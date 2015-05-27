@@ -1,4 +1,7 @@
 class HomeController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :contact_us, :privacy_policy, :faq, :tuiton, :the_program, :curriculum]
+  layout :choose_layout
+
   def index
     unset_footer
   end
@@ -25,5 +28,9 @@ class HomeController < ApplicationController
   end
 
   def curriculum
+  end
+
+  def choose_layout
+    user_signed_in? ? "angular" : "application"
   end
 end
