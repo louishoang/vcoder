@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "VCoders BootCamp - Full-Stack Web Development with Ruby on Rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "VCoder BootCamp - Full-Stack Web Development with Ruby on Rails" %></title>
     <%= favicon_link_tag 'favicon.png' %>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -18,10 +18,10 @@
     <div class="fixed">
       <nav class="top-bar sticky" data-topbar role="navigation">
         <ul class="title-area">
-          <!-- Title Area -->
+          <!-- Brand Area -->
           <li class="name">
             <h1>
-              <a href="/"><%= image_tag "white2.png", id: "main-logo" %>
+              <a href="/"><%= image_tag "white2.png", id: "main-logo", alt: "Vcoder" %>
               </a>
             </h1>
           </li>

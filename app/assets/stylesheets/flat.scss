@@ -62,7 +62,7 @@
 
 .field-man{
   @media #{$small-only} {
-    font-size: 0.9em;
+    font-size: 1.5em;
   }
 }
 
@@ -454,6 +454,9 @@
   font-family: "Merriweather",Georgia,serif;
   font-weight: bold;
   margin-bottom: 20px !important;
+  @media #{$small-only} {
+    font-size: 25px !important;
+  }
 }
 
 #cp-right{
