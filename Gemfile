@@ -34,6 +34,9 @@ gem "font-awesome-rails"
 
 #authentication with devise
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'uuidtools'
 
 gem 'rails_12factor', group: :production
 
