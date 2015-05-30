@@ -153,10 +153,16 @@
                        "data-url" => contact_us_path,
                         class: "x2-margin-top form-ajax"}) do %>
         <%= text_field_tag 'name',
-                             nil,
-                            placeholder: 'Name...' %>
-        <%= email_field_tag 'email', nil, placeholder: 'Email@vcoders.com' %>
-        <%= text_area_tag 'messages', nil, placeholder: "Message...", rows: 3, cols: 25 %>
+                            nil,
+                            placeholder: 'Name',
+                            :required => true %>
+        <%= email_field_tag 'email',
+                            nil,
+                            placeholder: 'Email',
+                            :required => true,
+                            :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
+        <%= text_area_tag 'messages',
+                          nil, placeholder: "Message", rows: 3, cols: 25 %>
         <%= button_tag "Send", class: "small button small-3 right radius" %>
       <% end %>
     </div>

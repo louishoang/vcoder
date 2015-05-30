@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_filter :authenticate_user!, except: [:index, :contact_us, :privacy_policy, :faq, :tuiton, :the_program, :curriculum]
+  before_filter :authenticate_user!, except: [:index, :contact_us, :privacy_policy, :faq, :tuition, :the_program, :curriculum]
   layout :choose_layout
 
   def index

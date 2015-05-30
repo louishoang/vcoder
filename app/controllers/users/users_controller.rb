@@ -8,6 +8,7 @@ class Users::UsersController < Devise::SessionsController
           success: !User.find_by_name(params[:name]).blank?
         }
   end
+
   private
 
   def reject_if_not_authorized_request!
