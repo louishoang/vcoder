@@ -9,7 +9,7 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", :media => "all" %>
   </head>
-  <body ng-controller="pageslideCtrl">
+  <body>
     <div class="fixed top-bar-shadow" ng-controller="pageslideCtrl">
       <nav class="top-bar sticky" data-topbar role="navigation">
         <ul class="title-area">
@@ -70,7 +70,7 @@
                 <i class="fa fa-cog cl-orange"></i>
                 <span class="oc-menu-text">Settings</span></li>
              </ul>
-             <ul class="no-bullet oc-menu">
+             <ul class="no-bullet oc-menu" ng-show="isAdmin()">
               <li>
                 <i class="fa fa-bullhorn"></i>
                 <span class="oc-menu-text">Annoucements<span></li>

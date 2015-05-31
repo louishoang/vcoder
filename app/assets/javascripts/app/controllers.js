@@ -1,11 +1,20 @@
-angular.module('myApp.controllers',[])
-  .controller('pageslideCtrl',
-              ['$scope',
-              function($scope){
+angular.module("myApp.controllers",[])
+  .controller("pageslideCtrl",
+              ["$scope", "SessionService",
+              function($scope, SessionService){
     $scope.checked = false; // This will be binded using the ps-open attribute
     $scope.toggle = function(){
       $scope.checked = !$scope.checked
+    };
+    $scope.user = null;
+    SessionService.getCurrentUser().then(function(resp){
+      $scope.user = resp.user;
+    });
+
+    $scope.isAdmin = function(){
+      return $scope.user.role === "Admin";
     }
+
   }])
   .controller('ClassRoomController',
                  ["$scope", "SessionService",
