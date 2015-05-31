@@ -10,17 +10,18 @@
     <%= stylesheet_link_tag "application", :media => "all" %>
   </head>
   <body ng-controller="pageslideCtrl">
-    <div class="fixed" ng-controller="pageslideCtrl">
+    <div class="fixed top-bar-shadow" ng-controller="pageslideCtrl">
       <nav class="top-bar sticky" data-topbar role="navigation">
         <ul class="title-area">
           <!-- Brand Area -->
           <li class="name">
             <h1>
-              <a href="/"><%= image_tag "white2.png", id: "main-logo", alt: "Vcoder" %>
+              <a href="/#/">
+                <%= image_tag "white2.png", id: "cr-main-logo", alt: "Vcoder" %>
               </a>
             </h1>
           </li>
-          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+          <li class="toggle-topbar menu-icon"><a href="/#/"><span>Menu</span></a></li>
         </ul>
         <section class="top-bar-section">
           <!-- Right Nav Section -->
@@ -41,10 +42,10 @@
       </nav>
     </div>
     <div class="container">
-      <div ng-controller="pageslideCtrl">
-        <a class="button success btn-off-canvas"
+      <div ng-controller="pageslideCtrl" id="off-canvas-control">
+        <a class="button primary btn-off-canvas"
             href="javascript:;"
-            ng-click="toggle()"><i class="fa fa-th"></i></a>
+            ng-click="toggle()"><i class="fa fa-th fa-lg"></i></a>
         <div pageslide ps-open="checked"
               ps-auto-close="true"
               ps-size="240px"

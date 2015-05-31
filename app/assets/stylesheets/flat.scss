@@ -6,6 +6,13 @@
   }
 }
 
+#cr-main-logo{
+  width: 130px;
+  @media #{$large-up} {
+    margin-left: 25px ;
+  }
+}
+
 .sub-top{
   background-color: #1C2225;
   height: 7px;
@@ -51,6 +58,10 @@
   background-color: white;
 }
 
+.line-height{
+  line-height: 0.8;
+}
+
 .field-man{
   margin: 20px auto;
   font-family: "Montserrat", sans-serif;
@@ -78,7 +89,9 @@
 
 #btn-sign-in{
   padding: 10px 15px 10px 15px;
-  margin: 7px auto;
+  @media #{$large-only} {
+    margin: 7px auto;
+  }
 }
 
 #sign-in-li{
@@ -86,7 +99,7 @@
 }
 
 .cs-panel{
-  background: #fff;
+  background: #FFFFFF;
   min-height: 166px;
   overflow: hidden;
 }
@@ -507,7 +520,14 @@
 .btn-off-canvas{
   margin-left: 2px;
   border-radius: 2px;
-  padding: 2px 5px 2px 5px;
+  padding: 5px 7px;
+}
+
+#off-canvas-control{
+  margin-top: 6px;
+  @media #{$large-only} {
+    position: absolute;
+  }
 }
 
 #div-off-canvas{
@@ -537,6 +557,7 @@
 .oc-menu-text{
   position: relative;
   top: -3px;
+  font-weight: 500;
 }
 
 .cl-blue{
@@ -559,4 +580,66 @@
   font-size: 30px;
 }
 
+.section-header{
+  color: #999;
+  margin: 0px 0px 10px 10px;
+  padding-top: 10px;
+  line-height: 1.5;
+  font-size: 13px;
+  opacity: 0.8;
+  font-weight: 200;
+}
 
+.cr-panel{
+  box-shadow: 0 0.5px 0 0 #ffffff inset, 0 1px 2px 0 #B3B3B3;
+}
+
+.top-bar-shadow{
+  -webkit-box-shadow: 0 10px 7px -4px #ADACAC;
+  -moz-box-shadow: 0 10px 7px -4px #ADACAC;
+  box-shadow: 0 10px 7px -4px #ADACAC;
+}
+
+.section-items:first-child{
+  margin-top: -10px;
+}
+
+.section-items{
+  padding: 10px 0px 10px 5px;
+  border-bottom: 1px solid #E5E5E5;
+  font-weight: 200;
+}
+
+.section-items i{
+  margin-right: 10px;
+}
+
+.section-items .actions{
+  text-align: right;
+}
+
+.section-items .actions i{
+  font-size: 16px;
+  opacity: 0.3;
+  margin-right: 20px;
+}
+
+.section-items .actions i:hover{
+  opacity: 1;
+  color: #39949A;
+}
+
+.section-items .item-title{
+  display: inline-block;
+}
+
+.section-items .item-title .notification{
+  font-size: 80%;
+  margin-right: 15px;
+  color: #02ACC1;
+  font-weight: bold;
+}
+
+.section-items .item-title .annoucement{
+  color: #DB4437;
+}
