@@ -3,7 +3,8 @@ angular.module('myApp',
                'ngResource',
                'myApp.controllers',
                'myApp.services',
-               'pageslide-directive'])
+               'pageslide-directive',
+               'firebase'])
   .config(function($routeProvider){
     $routeProvider.when('/', {
       templateUrl: '/templates/dashboard.html',

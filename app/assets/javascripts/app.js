@@ -1,8 +1,8 @@
 $(function(){
-  console.log("================================");
-  console.log("Interested in teaching Rails?");
-  console.log("We are looking for talents on RoR, Jquery");
-  console.log("================================");
+  // console.log("================================");
+  // console.log("Interested in teaching Rails?");
+  // console.log("We are looking for talents on RoR, Jquery");
+  // console.log("================================");
   // Form ajax start
   $(document).on("submit", ".form-ajax", function(e){
     e.preventDefault();

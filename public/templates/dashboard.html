@@ -1,26 +1,15 @@
 <div class="small-12 large-10 large-offset-1 container margin-top">
   <div class="small-12 large-10 columns text-dark-grey section-header">Notifications</div>
-  <div class="small-12 large-12 columns panel white-bg cr-panel">
-    <div class="section-items small-12 large-12 columns">
+  <div class="small-12 large-12 columns panel white-bg cr-panel"
+        ng-controller="NotificationController">
+    <div class="section-items small-12 large-12 columns"
+          ng-repeat="notification in notifications">
       <div class="item-title small-12 large-2 columns">
         <i class="fa fa-file-text"></i>
-        <span class="notification annoucement">Annoucements</span>
+        <span class="notification {{notification.type | lowercase }}">{{notification.type}}</span>
       </div>
       <div class="item-title small-12 large-8 columns">
-        <span class="item-content">Welcome to VCoder DashBoard</span>
-      </div>
-      <div class="actions small-12 large-2 columns">
-        <i class="fa fa-check-square-o"></i>
-        <i class="fa fa-paper-plane"></i>
-      </div>
-    </div>
-    <div class="section-items small-12 large-12 columns">
-      <div class="item-title small-12 large-2 columns">
-        <i class="fa fa-file-text"></i>
-        <span class="notification">General</span>
-      </div>
-      <div class="item-title small-12 large-8 columns">
-        <span class="item-content">You have one message from Louis Hoang</span>
+        <span class="item-content">{{notification.message}}</span>
       </div>
       <div class="actions small-12 large-2 columns">
         <i class="fa fa-check-square-o"></i>

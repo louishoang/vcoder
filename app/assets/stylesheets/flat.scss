@@ -537,6 +537,7 @@
 .oc-menu{
   font-weight: bold;
   color: #757575;
+  border-bottom: 1px solid #E5E5E5;
 }
 
 .oc-menu li{
@@ -662,6 +663,12 @@
   @media #{$large-only} {
     bottom: 0px;
   }
+}
+
+#help-request .hr-btn:hover{
+  -webkit-box-shadow: 0 3px 6px #777;
+  -moz-box-shadow: 0 3px 6px #777;
+  box-shadow: 0 3px 6px #777;
 }
 
 .hr-icon{

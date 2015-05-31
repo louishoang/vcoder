@@ -70,16 +70,38 @@
                 <i class="fa fa-cog cl-orange"></i>
                 <span class="oc-menu-text">Settings</span></li>
              </ul>
+             <ul class="no-bullet oc-menu">
+              <li>
+                <i class="fa fa-bullhorn"></i>
+                <span class="oc-menu-text">Annoucements<span></li>
+              <li>
+                <i class="fa fa-graduation-cap"></i>
+                <span class="oc-menu-text">Students Accounts</span>
+              </li>
+              <li>
+                <i class="fa fa-comments-o"></i>
+                <span class="oc-menu-text">Help Request</span></li>
+              <li>
+                <i class="fa fa-pencil"></i>
+                <span class="oc-menu-text">Blog</span></li>
+              <li>
+                <i class="fa fa-cog"></i>
+                <span class="oc-menu-text">Settings</span></li>
+             </ul>
           </div>
         </div>
       </div>
       <div data-ng-view></div>
       <div id="help-request">
-        <button class="button alert hr-btn">
+        <button class="button alert hr-btn shake shake-little">
           <i class="fa fa-comments-o hr-icon"></i>
         </button>
       </div>
     </div> <!-- /container -->
     <%= javascript_include_tag "application" %>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+    <!-- AngularFire Library -->
+    <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
   </body>
 </html>
