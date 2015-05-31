@@ -52,6 +52,12 @@
         </section>
       </nav>
     </div>
+    <% if flash.any? %>
+      <div data-alert class="alert-box warning text-center">
+        <%= flash[:alert] %>
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
     <!-- <div class="sub-top"></div> -->
     <%= yield %>
     <%= javascript_include_tag "application" %>
