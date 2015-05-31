@@ -9,8 +9,8 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", :media => "all" %>
   </head>
-  <body>
-     <div class="fixed">
+  <body ng-controller="pageslideCtrl">
+    <div class="fixed" ng-controller="pageslideCtrl">
       <nav class="top-bar sticky" data-topbar role="navigation">
         <ul class="title-area">
           <!-- Brand Area -->
@@ -28,18 +28,7 @@
             <li><a href="/#/">DASHBOARD</a>
             <li class="divider"></li>
             <!-- <li class="divider show-for-small"></li>
-            <li><a href="<%= the_program_path %>">THE PROGRAM</a>
-            <li class="divider"></li>
-            <li class="divider show-for-small"></li>
-            <li><a href="<%= curriculum_path %>">CURRICULUM</a>
-            <li class="divider"></li>
-            <li class="divider show-for-small"></li>
-            <li><a href="<%= tuition_path %>">TUITION</a>
-            <li class="divider"></li>
-            <li class="divider show-for-small"></li>
-            <li><a href="<%= faq_path %>">FAQ</a>
-            <li class="divider"></li>
-            <li class="divider show-for-small"></li> -->
+            <li><a href="<%= the_program_path %>">THE PROGRAM</a> !-->
             <li id="sign-in-li">
               <%= link_to "SIGN OUT",
                            destroy_user_session_path,
@@ -52,6 +41,37 @@
       </nav>
     </div>
     <div class="container">
+      <div ng-controller="pageslideCtrl">
+        <a class="button success btn-off-canvas"
+            href="javascript:;"
+            ng-click="toggle()"><i class="fa fa-th"></i></a>
+        <div pageslide ps-open="checked"
+              ps-auto-close="true"
+              ps-size="240px"
+              ps-cloak="false"
+              ps-side="left"
+              ps-push="true"
+              ps-speed="0.5"
+              id="div-off-canvas">
+          <div id="custom-off-canvas">
+            <ul class="no-bullet oc-menu">
+              <li>
+                <i class="cl-blue infi">&infin;</i>
+                <span class="oc-menu-text">DashBoard<span></li>
+              <li>
+                <i class="fa fa-user cl-brown"></i>
+                <span class="oc-menu-text">View Profile</span>
+              </li>
+              <li>
+                <i class="fa fa-rocket cl-green"></i>
+                <span class="oc-menu-text">Help Request</span></li>
+              <li>
+                <i class="fa fa-cog cl-orange"></i>
+                <span class="oc-menu-text">Settings</span></li>
+             </ul>
+          </div>
+        </div>
+      </div>
       <div data-ng-view></div>
     </div> <!-- /container -->
 
