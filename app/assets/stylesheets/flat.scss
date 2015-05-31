@@ -643,3 +643,29 @@
 .section-items .item-title .annoucement{
   color: #DB4437;
 }
+
+#help-request{
+  position: absolute;
+  bottom: 0px;
+  right: 30px;
+}
+
+#help-request .hr-btn{
+  text-align: left;
+  border-radius: 50%;
+  height: 60px;
+  width: 50px;
+  -webkit-box-shadow: 0 3px 2px #777;
+  -moz-box-shadow: 0 3px 2px #777;
+  box-shadow: 0 3px 2px #777;
+  bottom: -10px;
+  @media #{$large-only} {
+    bottom: 0px;
+  }
+}
+
+.hr-icon{
+  margin-left: -13px;
+  font-size: 30px;
+  color: white;
+}
