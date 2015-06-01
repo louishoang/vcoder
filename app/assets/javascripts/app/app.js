@@ -15,5 +15,9 @@ angular.module('myApp',
         }
       }
     })
+    .when('/students', {
+      templateUrl: '/templates/admin/student.html',
+      controller: 'StudentsController'
+    })
   .otherwise({redirectTo: '/'});
 });

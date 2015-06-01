@@ -541,7 +541,6 @@
 }
 
 .oc-menu li{
-  padding: 15px 20px 15px 20px;
   font-size: 90%;
 }
 
@@ -553,6 +552,13 @@
 .oc-menu i{
   font-size: 25px;
   margin-right: 10px;
+}
+
+.oc-menu li a{
+  padding: 15px 0px 15px 20px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .oc-menu-text{

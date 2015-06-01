@@ -57,36 +57,59 @@
           <div id="custom-off-canvas">
             <ul class="no-bullet oc-menu">
               <li>
-                <i class="cl-blue infi">&infin;</i>
-                <span class="oc-menu-text">DashBoard<span></li>
-              <li>
-                <i class="fa fa-user cl-brown"></i>
-                <span class="oc-menu-text">View Profile</span>
+                <a href="/#/">
+                  <i class="cl-blue infi">&infin;</i>
+                  <span class="oc-menu-text">DashBoard<span>
+                </a>
               </li>
               <li>
-                <i class="fa fa-rocket cl-green"></i>
-                <span class="oc-menu-text">Help Request</span></li>
+                <a href="/#/">
+                  <i class="fa fa-user cl-brown"></i>
+                  <span class="oc-menu-text">View Profile</span>
+                </a>
+              </li>
               <li>
-                <i class="fa fa-cog cl-orange"></i>
-                <span class="oc-menu-text">Settings</span></li>
+                <a href="/#/">
+                  <i class="fa fa-rocket cl-green"></i>
+                  <span class="oc-menu-text">Help Request</span>
+                </a>
+              <li>
+                <a href="/#/">
+                  <i class="fa fa-cog cl-orange"></i>
+                  <span class="oc-menu-text">Settings</span>
+                </a>
+              </li>
              </ul>
              <ul class="no-bullet oc-menu" ng-show="isAdmin()">
               <li>
-                <i class="fa fa-bullhorn"></i>
-                <span class="oc-menu-text">Annoucements<span></li>
-              <li>
-                <i class="fa fa-graduation-cap"></i>
-                <span class="oc-menu-text">Students Accounts</span>
+                <a href="/#/">
+                  <i class="fa fa-bullhorn"></i>
+                  <span class="oc-menu-text">Annoucements<span>
+                </a>
               </li>
               <li>
-                <i class="fa fa-comments-o"></i>
-                <span class="oc-menu-text">Help Request</span></li>
+                <a href="/#/students">
+                  <i class="fa fa-graduation-cap"></i>
+                  <span class="oc-menu-text">Students Accounts</span>
+                </a>
+              </li>
               <li>
-                <i class="fa fa-pencil"></i>
-                <span class="oc-menu-text">Blog</span></li>
+                <a href="/#/">
+                  <i class="fa fa-comments-o"></i>
+                  <span class="oc-menu-text">Help Request</span>
+                </a>
+              </li>
               <li>
-                <i class="fa fa-cog"></i>
-                <span class="oc-menu-text">Settings</span></li>
+                <a href="/#/">
+                  <i class="fa fa-pencil"></i>
+                  <span class="oc-menu-text">Blog</span>
+                </a>
+              <li>
+                <a href="/#/">
+                  <i class="fa fa-cog"></i>
+                  <span class="oc-menu-text">Settings</span>
+                </a>
+              </li>
              </ul>
           </div>
         </div>
@@ -98,6 +121,18 @@
         </button>
       </div>
     </div> <!-- /container -->
+    <script>
+      window.paceOptions = {
+        document: true, // disabled
+        eventLag: true,
+        restartOnPushState: true,
+        restartOnRequestAfter: true,
+        ajax: {
+            trackMethods: [ 'POST','GET']
+        }
+      };
+
+    </script>
     <%= javascript_include_tag "application" %>
     <!-- Firebase -->
     <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>

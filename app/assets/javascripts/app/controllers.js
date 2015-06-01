@@ -30,4 +30,7 @@ angular.module("myApp.controllers",[])
       type: "General",
       message: "You have one message from Louis Hoang"
     }];
+  }])
+  .controller("StudentsController", ["$scope", function($scope){
+    $scope.users = ["Louis", "Emy", "Money"];
   }]);
