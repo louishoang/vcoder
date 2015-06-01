@@ -4,8 +4,6 @@ angular.module('myApp',
                'myApp.controllers',
                'myApp.services',
                'pageslide-directive',
-               'firebase',
-               'restangular',
                'ng-rails-csrf'])
   .config(function($routeProvider){
     $routeProvider.when('/', {

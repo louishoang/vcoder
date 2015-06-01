@@ -20,8 +20,8 @@ angular.module("myApp.controllers",[])
     $scope.user = SessionService.currentUser.user;
   }])
   .controller("NotificationController",
-               ["$scope", "$firebase"
-              ,function($scope, $firebase){
+               ["$scope"
+              ,function($scope){
     $scope.notifications = [{
       type: "Annoucement",
       message: "Welcome to VCoder DashBoard"
