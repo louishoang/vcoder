@@ -114,7 +114,7 @@
           </div>
         </div>
       </div>
-      <div data-ng-view></div>
+      <div class="marry-weather" data-ng-view></div>
       <div id="help-request">
         <button class="button alert hr-btn shake shake-little">
           <i class="fa fa-comments-o hr-icon"></i>
@@ -133,10 +133,12 @@
       };
 
     </script>
-    <%= javascript_include_tag "application" %>
     <!-- Firebase -->
     <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
     <!-- AngularFire Library -->
     <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/restangular/1.3.1/restangular.min.js"></script>
+    <%= javascript_include_tag "application" %>
   </body>
 </html>

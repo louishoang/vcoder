@@ -4,7 +4,8 @@ angular.module('myApp',
                'myApp.controllers',
                'myApp.services',
                'pageslide-directive',
-               'firebase'])
+               'firebase',
+               'restangular'])
   .config(function($routeProvider){
     $routeProvider.when('/', {
       templateUrl: '/templates/dashboard.html',

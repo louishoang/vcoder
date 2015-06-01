@@ -16,4 +16,15 @@ angular.module('myApp.services', ['ngResource'])
       }
     };
     return service;
-  });
+  })
+  .factory("Student", ["$resource", function($resource){
+    return $resource("/students/:id", {id: "@id"},
+      {
+      'create':  { method: 'POST' },
+      'index':   { method: 'GET'},
+      'show':    { method: 'GET', isArray: false },
+      'update':  { method: 'PUT' },
+      'destroy': { method: 'DELETE' }
+      }
+    );
+  }]);

@@ -31,6 +31,17 @@ angular.module("myApp.controllers",[])
       message: "You have one message from Louis Hoang"
     }];
   }])
-  .controller("StudentsController", ["$scope", function($scope){
-    $scope.students = ["Louis", "Emy", "Money"];
+  .controller("StudentsController",
+             ["$scope", "Student", function($scope, Student){
+    Student.index(function(resp){
+      $scope.students = resp.students;
+    });
+
+    $scope.student = {name: "", email: "", password:"changeme", cohort: ""};
+
+    $scope.newStudent = function(){
+      debugger;
+      Student.create(student);
+    };
+
   }]);

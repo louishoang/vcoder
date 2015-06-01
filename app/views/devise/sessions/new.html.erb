@@ -4,6 +4,11 @@
     <%= form_for(resource, :as => resource_name,
                            :url => session_path(resource_name),
                             :html => {:class => "x2-margin-top form-custom"}) do |f| %>
+      <% if flash.any? && flash[:alert] %>
+        <div data-alert class="alert-box alert text-center">
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
       <div><%= f.label :email %>
         <%= f.email_field :email, :autofocus => true %>
       </div>

@@ -28,4 +28,6 @@ Rails.application.routes.draw do
   end
 
   resources :cohorts
+
+  resources :students
 end
