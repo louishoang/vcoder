@@ -41,6 +41,7 @@ gem 'uuidtools'
 # include angularjs
 gem 'angularjs-rails','>=1.2.0.rc1'
 gem 'ngmin-rails'
+gem 'ng-rails-csrf' #csrf handler for angular
 
 #solve heroku deploy issue
 gem 'rails_12factor', group: :production

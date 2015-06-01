@@ -29,58 +29,56 @@
     </table>
   </div>
   <div class="small-12 large-5 columns">
-    <!-- <h5 class="text-dark-grey"></h5> -->
-      <form name="newStudentForm"
-            ng-submit="newStudent()" novalidate>
-        <fieldset>
-          <legend>Add New Student</legend>
-          <label>Full Name
-            <input type="text"
-                    name="name"
-                    ng-model="student.name"
-                    ng-required="true" required>
-          </label>
-          <div role="alert">
-            <small class="error"
-                    ng-show="newStudentForm.name.$invalid &&
-                             !newStudentForm.name.$pristine">
-             Full Name is required</small>
-          </div>
-          <label>Email
-            <input type="email"
-                    name="email"
-                    ng-model="student.email"
-                    ng-required="true"
-                    required>
-          </label>
-          <div role="alert">
-            <small class="error"
-                    ng-show="newStudentForm.email.$invalid &&
-                             !newStudentForm.email.$pristine">
-             Email is required</small>
-          </div>
-          <label>Password
-            <input type="text"
-                    name="password"
-                    ng-model="student.password"
-                    placeholder="changeme"
-                    value="changeme"
-                    disabled>
-          </label>
-          <label>Cohort
-            <select ng-model="student.cohort"
-                    ng-required="true">
-              <option value="">Please choose cohort</option>
-              <option value="July">July</option>
-              <option value="August">August</option>
-            </select>
-          </label>
-          <button type="submit"
-                  class="button small"
-                  >Create Account</button>
-        </fieldset>
-      </form>
-      {{student}}
+    <form name="newStudentForm"
+          ng-submit="newStudent()" novalidate>
+      <fieldset>
+        <legend>Add New Student</legend>
+        <label>Full Name
+          <input type="text"
+                  name="name"
+                  ng-model="student.name"
+                  ng-required="true" required>
+        </label>
+        <div role="alert">
+          <small class="error"
+                  ng-show="newStudentForm.name.$invalid &&
+                           !newStudentForm.name.$pristine">
+           Full Name is required</small>
+        </div>
+        <label>Email
+          <input type="email"
+                  name="email"
+                  ng-model="student.email"
+                  ng-required="true"
+                  required>
+        </label>
+        <div role="alert">
+          <small class="error"
+                  ng-show="newStudentForm.email.$invalid &&
+                           !newStudentForm.email.$pristine">
+           Email is required</small>
+        </div>
+        <label>Password
+          <input type="text"
+                  name="password"
+                  ng-model="student.password"
+                  placeholder="changeme"
+                  value="changeme"
+                  disabled>
+        </label>
+        <label>Cohort
+          <select ng-model="student.cohort"
+                  ng-required="true">
+            <option value="">Please choose cohort</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+          </select>
+        </label>
+        <button type="submit"
+                class="button small"
+                >Create Account</button>
+      </fieldset>
+    </form>
   </div>
 </div>
 

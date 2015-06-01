@@ -5,7 +5,8 @@ angular.module('myApp',
                'myApp.services',
                'pageslide-directive',
                'firebase',
-               'restangular'])
+               'restangular',
+               'ng-rails-csrf'])
   .config(function($routeProvider){
     $routeProvider.when('/', {
       templateUrl: '/templates/dashboard.html',

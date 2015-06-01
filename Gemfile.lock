@@ -80,6 +80,7 @@ GEM
     multi_json (1.11.0)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    ng-rails-csrf (0.1.0)
     ngmin-rails (0.4.0)
       rails (>= 3.1)
     oauth2 (1.0.0)
@@ -175,6 +176,7 @@ DEPENDENCIES
   foundation-rails
   jbuilder (~> 2.0)
   jquery-rails
+  ng-rails-csrf
   ngmin-rails
   omniauth
   omniauth-github

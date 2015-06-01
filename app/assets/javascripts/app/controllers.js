@@ -40,8 +40,7 @@ angular.module("myApp.controllers",[])
     $scope.student = {name: "", email: "", password:"changeme", cohort: ""};
 
     $scope.newStudent = function(){
-      debugger;
-      Student.create(student);
+      Student.create($scope.student);
     };
 
   }]);
