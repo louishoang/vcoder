@@ -32,5 +32,5 @@ angular.module("myApp.controllers",[])
     }];
   }])
   .controller("StudentsController", ["$scope", function($scope){
-    $scope.users = ["Louis", "Emy", "Money"];
+    $scope.students = ["Louis", "Emy", "Money"];
   }]);
