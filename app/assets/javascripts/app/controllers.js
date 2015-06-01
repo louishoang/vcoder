@@ -41,6 +41,8 @@ angular.module("myApp.controllers",[])
 
     $scope.newStudent = function(){
       Student.create($scope.student);
+      $scope.students.push($scope.student);
+      $scope.student = {name: "", email: "", password:"changeme", cohort: ""};
     };
 
   }]);
