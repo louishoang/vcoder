@@ -5,6 +5,6 @@ class User < ActiveRecord::Base
   ROLE_STUDENT = "Student"
 
   devise :database_authenticatable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
   has_many :authorizations, :dependent => :destroy
 end

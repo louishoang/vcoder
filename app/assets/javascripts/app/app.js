@@ -3,6 +3,7 @@ angular.module('myApp',
                'ngResource',
                'myApp.controllers',
                'myApp.services',
+               'myApp.filters',
                'pageslide-directive',
                'ng-rails-csrf'])
   .config(function($routeProvider){

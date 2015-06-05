@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # foundation
-gem 'foundation-rails'
+gem 'foundation-rails', '5.4.5'
 
 #font awesome
 gem "font-awesome-rails"
@@ -39,7 +39,7 @@ gem 'omniauth-github'
 gem 'uuidtools'
 
 # include angularjs
-gem 'angularjs-rails','>=1.2.0.rc1'
+gem 'angularjs-rails'
 gem 'ngmin-rails'
 gem 'ng-rails-csrf' #csrf handler for angular
 
