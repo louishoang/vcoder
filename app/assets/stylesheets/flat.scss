@@ -652,10 +652,12 @@
 }
 
 #help-request{
-  position: relative;
   float: right;
   bottom: 0px;
   right: 30px;
+  @media #{$large-only} {
+    position: absolute;
+  }
 }
 
 #help-request .hr-btn{
@@ -704,4 +706,8 @@ input[disabled]{
   background: url(search.png) no-repeat right ;
   background-size: 25px 25px;
   background-position: right 0.5em bottom 5px;
+}
+
+#table--student-list{
+  overflow: auto;
 }
