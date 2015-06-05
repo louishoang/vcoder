@@ -656,7 +656,7 @@
   bottom: 0px;
   right: 30px;
   @media #{$large-only} {
-    position: absolute;
+    position: fixed;
   }
 }
 
