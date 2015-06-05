@@ -43,6 +43,8 @@ gem 'angularjs-rails'
 gem 'ngmin-rails'
 gem 'ng-rails-csrf' #csrf handler for angular
 
+gem 'unicorn'
+
 #solve heroku deploy issue
 gem 'rails_12factor', group: :production
 
