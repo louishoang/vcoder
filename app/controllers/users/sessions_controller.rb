@@ -5,8 +5,8 @@ class Users::SessionsController < Devise::SessionsController
     render status: 200,
       json: {
         success: true,
-        info: "Current user",
-        user: current_user
+        user: current_user,
+        role: current_user.role
       }
   end
 

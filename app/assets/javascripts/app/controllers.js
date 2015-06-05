@@ -9,6 +9,7 @@ angular.module("myApp.controllers",[])
     $scope.user = null;
     SessionService.getCurrentUser().then(function(resp){
       $scope.user = resp.user;
+      $scope.user.role = resp.role;
       $scope.isAdmin = function(){
         return $scope.user.role == "Admin";
       }
@@ -74,14 +75,25 @@ angular.module("myApp.controllers",[])
 
     Student.index(function(resp){
       $scope.students = resp.students;
-      $scope.pageCount = $scope.students.length % $scope.itemsPerPage;
+      $scope.pageCount = Math.ceil($scope.students.length / $scope.itemsPerPage);
     });
 
-    $scope.student = {name: "", email: "", password:"changeme", cohort: ""};
+    $scope.student = {name: "", email: "", password:"changeme",
+                      cohort: "", is_active: ""};
 
     $scope.newStudent = function(){
-      Student.create($scope.student);
-      $scope.students.push($scope.student);
+      Student.create($scope.student, function(resp){
+        if(resp.success){
+          toastr.success(resp.success);
+          $scope.students.push(resp.student);
+        }else{
+          toastr.error(resp.error);
+        }
+      });
+    };
+
+    $scope.changeStatus = function(stud){
+      Student.update(stud);
     };
 
   }]);

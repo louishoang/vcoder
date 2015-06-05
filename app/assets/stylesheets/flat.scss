@@ -705,8 +705,8 @@ input[disabled]{
   -moz-border-radius: 50px;
   border-radius: 50px;
   background: url(search.png) no-repeat right ;
-  background-size: 25px 25px;
-  background-position: right 0.5em bottom 3px;
+  background-size: 20px 20px;
+  background-position: right 0.5em bottom 5px;
 }
 
 #admin-table--student{
@@ -718,6 +718,12 @@ input[disabled]{
 }
 .pagination-div{
   float: right;
+}
+
+.toast:first-child{
+  @media #{$large-only} {
+    margin-top: 60px !important;
+  }
 }
 
 
