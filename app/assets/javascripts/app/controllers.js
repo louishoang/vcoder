@@ -16,8 +16,8 @@ angular.module("myApp.controllers",[])
     });
   }])
   .controller('ClassRoomController',
-                 ["$scope", "SessionService",
-                  function($scope, SessionService){
+                 ["$scope", "SessionService", "$route",
+                  function($scope, SessionService, $routes){
     $scope.user = SessionService.currentUser.user;
   }])
   .controller("NotificationController",
