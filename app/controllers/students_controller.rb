@@ -4,7 +4,7 @@ class StudentsController < ApplicationController
 
   def index
     #TODO: filter students only
-    @students = Student.all
+    @students = User.all
     render status: 200,
           json: {
             students: @students

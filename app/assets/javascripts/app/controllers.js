@@ -38,7 +38,7 @@ angular.module("myApp.controllers",[])
     $scope.sortType = "email";
     $scope.sortReverse = false;
     $scope.searchTerm = '';
-    $scope.itemsPerPage = 5;
+    $scope.itemsPerPage = 25;
     $scope.currentPage = 0;
 
     $scope.prevPage = function() {
