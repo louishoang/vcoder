@@ -695,3 +695,12 @@ input[disabled]{
   border-radius: 5px;
   padding: 0.6rem 1.5rem 0.6rem 0.875rem;
 }
+
+.search-container .search-query{
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  background: url(search.png) no-repeat right ;
+  background-size: 25px 25px;
+  background-position: right 0.5em bottom 5px;
+}

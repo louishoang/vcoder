@@ -33,6 +33,11 @@ angular.module("myApp.controllers",[])
   }])
   .controller("StudentsController",
              ["$scope", "Student", function($scope, Student){
+
+    $scope.sortType = "email";
+    $scope.sortReverse = false;
+    $scope.searchTerm = '';
+
     Student.index(function(resp){
       $scope.students = resp.students;
     });
