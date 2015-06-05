@@ -700,14 +700,24 @@ input[disabled]{
 }
 
 .search-container .search-query{
+  height: 32px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
   background: url(search.png) no-repeat right ;
   background-size: 25px 25px;
-  background-position: right 0.5em bottom 5px;
+  background-position: right 0.5em bottom 3px;
 }
 
-#table--student-list{
+#admin-table--student{
   overflow: auto;
 }
+
+#admin-table--student table{
+  width: 100%;
+}
+.pagination-div{
+  float: right;
+}
+
+
