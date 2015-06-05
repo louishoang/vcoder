@@ -690,3 +690,8 @@
 input[disabled]{
   cursor: not-allowed !important;
 }
+
+.custom-alert{
+  border-radius: 5px;
+  padding: 0.6rem 1.5rem 0.6rem 0.875rem;
+}

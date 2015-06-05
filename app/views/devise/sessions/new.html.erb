@@ -5,7 +5,7 @@
                            :url => session_path(resource_name),
                             :html => {:class => "x2-margin-top form-custom"}) do |f| %>
       <% if flash.any? && flash[:alert] %>
-        <div data-alert class="alert-box alert text-center">
+        <div data-alert class="alert-box alert text-center custom-alert">
           <%= flash[:alert] %>
         </div>
       <% end %>
