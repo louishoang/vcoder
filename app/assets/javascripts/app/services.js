@@ -39,6 +39,22 @@ angular.module('myApp.services', ['ngResource'])
       }
     );
   }])
+  .factory("FirebaseAnnouncement",
+          ["$firebase", "$firebaseArray",
+           function($firebase, $firebaseArray){
+    var ref = new Firebase("https://vcoder.firebaseio.com/announcements");
+
+    var announcements = $firebaseArray(ref);
+
+    var announcementServiceObject = {
+      announcements: announcements,
+      saveAnnouncement: function(announcement){
+        announcements.$add(announcement);
+      }
+    };
+
+    return announcementServiceObject;
+  }])
   .factory("PaginationService", function(){
     return function($scope, section) {
       $scope.sortType = "email";

@@ -1,22 +1,52 @@
-<div class="small-12 large-10 large-offset-1 container margin-top"
+<div class="small-12 large-10 large-offset-1 container margin-top marry-weather"
     ng-controller="AnnouncementController">
   <div class="small-12 large-12 columns text-dark-grey section-header">Announcements
   </div>
-  <div class="small-12 large-12 columns">
-    <div class="small-12 large-5 columns panel cr-panel">
+  <div class="small-12 large-5 columns">
+    <div class="small-12 large-12 columns panel cr-panel">
       <div class="new-announcement">
         <div class="arrow-left-border"></div>
         <div class="arrow-left"></div>
         <form ng-submit="newAnnouncement()">
-          <textarea rows="3" placeholder="What is new "></textarea>
+          <textarea rows="3" placeholder="What is new "
+            ng-model="announcement.content"></textarea>
           <div class="actions">
-            <button class="button button-primary tiny radius">
+            <button class="button button-primary tiny radius" id="btn-announ-post">
               <i class="fa fa-pencil icon-space-right"></i>Post
             </button>
           </div>
         </form>
       </div>
     </div>
+    <div class="small-12 large-12 columns panel cr-panel white-bg">
+      log
+    </div>
+  </div>
+  <div class="small-12 large-6 columns">
+    <div class="small-12 large-12 columns panel cr-panel white-bg">
+      <h5 id="displaying-announ">Displaying Announcements</h5>
+      <ul class="no-bullet">
+
+        <li class="section-items small-12 large-12 columns"
+          ng-repeat="announcement in announcements">
+          <div class="item-title small-12 large-12 columns">
+            <div class="item-title small-12 large-11 columns nopadding">
+              <i class="fa fa-file-text"></i>
+              <span class="notification {{announcement.type | lowercase }}">{{announcement.type}}</span>
+            </div>
+            <div class="actions small-12 large-1 columns">
+              <i class="fa fa-times"
+                ng-click="removeAnnouncement(announcement)"></i>
+            </div>
+          </div>
+          <div class="item-title small-12 large-12 columns">
+            <span class="item-content">{{announcement.content}}</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="small-12 large-1 columns">
   </div>
 </div>
 

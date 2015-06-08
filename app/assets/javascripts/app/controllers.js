@@ -21,16 +21,10 @@ angular.module("myApp.controllers",[])
     $scope.user = SessionService.currentUser.user;
   }])
   .controller("NotificationController",
-               ["$scope"
-              ,function($scope){
-    $scope.notifications = [{
-      type: "Annoucement",
-      message: "Welcome to VCoder DashBoard"
-    },
-    {
-      type: "General",
-      message: "You have one message from Louis Hoang"
-    }];
+               ["$scope", "FirebaseAnnouncement"
+              ,function($scope, FirebaseAnnouncement){
+    // Use for dashboard
+    $scope.notifications = FirebaseAnnouncement.announcements;
   }])
   .controller("StudentsController",
              ["$scope", "Student", "PaginationService",
@@ -63,15 +57,17 @@ angular.module("myApp.controllers",[])
 
   }])
   .controller("AnnouncementController",
-             ["$scope", "Announcement",
-              function($scope, Announcement){
+             ["$scope", "Announcement", "FirebaseAnnouncement",
+              function($scope, Announcement, FirebaseAnnouncement){
+    // admin section only
     $scope.announcement = {content: "", type: "Announcement"}
+    $scope.announcements = FirebaseAnnouncement.announcements;
 
     $scope.newAnnouncement = function(){
+      FirebaseAnnouncement.saveAnnouncement($scope.announcement);
       Announcement.create($scope.announcement, function(resp){
         if(resp.success){
           toastr.success(resp.success);
-          // $scope.students.push(resp.student);
         }else{
           toastr.error(resp.error);
         }

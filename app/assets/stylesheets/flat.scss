@@ -604,7 +604,7 @@
 
 .cr-panel{
   box-shadow: 0 0.5px 0 0 #ffffff inset, 0 1px 2px 0 #B3B3B3;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .top-bar-shadow{
@@ -653,7 +653,7 @@
   font-weight: bold;
 }
 
-.section-items .item-title .annoucement{
+.section-items .item-title .announcement{
   color: #DB4437;
 }
 
@@ -766,4 +766,13 @@ input[disabled]{
   border: 9px solid #52b0c5;
   border-left-color: transparent;
   border-bottom-color: transparent;
+}
+
+#btn-announ-post{
+  margin-bottom: 0px;
+}
+#displaying-announ{
+  margin-bottom: 20px;
+  color: #02ACC1;
+  font-weight: 500;
 }
