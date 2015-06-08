@@ -1,0 +1,22 @@
+<div class="small-12 large-10 large-offset-1 container margin-top"
+    ng-controller="AnnouncementController">
+  <div class="small-12 large-12 columns text-dark-grey section-header">Announcements
+  </div>
+  <div class="small-12 large-12 columns">
+    <div class="small-12 large-5 columns panel cr-panel">
+      <div class="new-announcement">
+        <div class="arrow-left-border"></div>
+        <div class="arrow-left"></div>
+        <form ng-submit="newAnnouncement()">
+          <textarea rows="3" placeholder="What is new "></textarea>
+          <div class="actions">
+            <button class="button button-primary tiny radius">
+              <i class="fa fa-pencil icon-space-right"></i>Post
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

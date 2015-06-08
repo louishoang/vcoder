@@ -50,6 +50,7 @@ GEM
     dotenv-rails (2.0.1)
       dotenv (= 2.0.1)
     erubis (2.7.0)
+    eventmachine (1.0.7)
     execjs (2.5.2)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
@@ -78,6 +79,7 @@ GEM
     multi_json (1.11.0)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    net-http-persistent (2.9.4)
     ng-rails-csrf (0.1.0)
     ngmin-rails (0.4.0)
       rails (>= 3.1)
@@ -104,6 +106,10 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
+    pubnub (3.7.1)
+      eventmachine (~> 1.0)
+      json (~> 1.8)
+      net-http-persistent (~> 2.9)
     rack (1.5.3)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -187,6 +193,7 @@ DEPENDENCIES
   omniauth-github
   pg
   pry-rails
+  pubnub
   rails (= 4.1.8)
   rails_12factor
   sass-rails (~> 4.0.3)

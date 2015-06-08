@@ -45,6 +45,9 @@ gem 'ng-rails-csrf' #csrf handler for angular
 
 gem 'unicorn'
 
+# real time
+gem 'pubnub'
+
 #solve heroku deploy issue
 gem 'rails_12factor', group: :production
 

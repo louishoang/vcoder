@@ -61,4 +61,20 @@ angular.module("myApp.controllers",[])
       Student.update(stud);
     };
 
+  }])
+  .controller("AnnouncementController",
+             ["$scope", "Announcement",
+              function($scope, Announcement){
+    $scope.announcement = {content: "", type: "Announcement"}
+
+    $scope.newAnnouncement = function(){
+      Announcement.create($scope.announcement, function(resp){
+        if(resp.success){
+          toastr.success(resp.success);
+          // $scope.students.push(resp.student);
+        }else{
+          toastr.error(resp.error);
+        }
+      });
+    };
   }]);

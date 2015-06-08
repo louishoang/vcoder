@@ -28,6 +28,17 @@ angular.module('myApp.services', ['ngResource'])
       }
     );
   }])
+  .factory("Announcement", ["$resource", function($resource){
+    return $resource("/announcements/:id", {id: "@id"},
+      {
+      'create':  { method: 'POST' },
+      'index':   { method: 'GET'},
+      'show':    { method: 'GET', isArray: false },
+      'update':  { method: 'PUT' },
+      'destroy': { method: 'DELETE' }
+      }
+    );
+  }])
   .factory("PaginationService", function(){
     return function($scope, section) {
       $scope.sortType = "email";

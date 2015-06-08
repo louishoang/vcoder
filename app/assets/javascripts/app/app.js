@@ -21,5 +21,9 @@ angular.module('myApp',
       templateUrl: '/templates/admin/student.html',
       controller: 'StudentsController'
     })
+    .when('/announcements', {
+      templateUrl: '/templates/admin/announcement.html',
+      controller: 'AnnouncementController'
+    })
   .otherwise({redirectTo: '/'});
 });

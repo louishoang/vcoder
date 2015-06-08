@@ -30,4 +30,6 @@ Rails.application.routes.draw do
   resources :cohorts
 
   resources :students
+
+  resources :announcements
 end

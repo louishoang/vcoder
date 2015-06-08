@@ -3,7 +3,6 @@ class StudentsController < ApplicationController
   respond_to :json
 
   def index
-    #TODO: filter students only
     @students = User.all
     render status: 200,
           json: {
