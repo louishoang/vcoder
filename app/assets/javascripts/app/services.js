@@ -50,6 +50,9 @@ angular.module('myApp.services', ['ngResource'])
       announcements: announcements,
       saveAnnouncement: function(announcement){
         announcements.$add(announcement);
+      },
+      removeAnnouncement: function(announcement){
+        announcements.$remove(announcement);
       }
     };
 

@@ -40,7 +40,7 @@
             </div>
           </div>
           <div class="item-title small-12 large-12 columns">
-            <span class="item-content">{{announcement.content}}</span>
+            <span class="item-content">{{announcement.content | limitTo: 50}}{{announcement.content.length > 50 ? "..." : ''}}</span>
           </div>
         </li>
       </ul>

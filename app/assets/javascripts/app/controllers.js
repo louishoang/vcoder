@@ -73,4 +73,8 @@ angular.module("myApp.controllers",[])
         }
       });
     };
+
+    $scope.removeAnnouncement = function(announcement){
+      FirebaseAnnouncement.removeAnnouncement(announcement);
+    };
   }]);
