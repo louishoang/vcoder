@@ -1,5 +1,7 @@
 class Student < User
-  belongs_to :cohort
+  belongs_to :cohort, foreign_key: :cohort_id
 
-  accepts_nested_attributes_for :cohort
+  def as_json(options = {})
+    super(options.merge(include: :cohort))
+  end
 end

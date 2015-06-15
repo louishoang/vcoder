@@ -26,10 +26,10 @@
             </th>
             <th>
               <a href="javascript:;"
-                ng-click="sortType = 'cohort'; sortReverse = !sortReverse">Cohort
-                <span ng-show="sortType == 'cohort' && !sortReverse"
+                ng-click="sortType = 'cohort.name'; sortReverse = !sortReverse">Cohort
+                <span ng-show="sortType == 'cohort.name' && !sortReverse"
                       class="fa fa-caret-down"></span>
-                <span ng-show="sortType == 'cohort' && sortReverse"
+                <span ng-show="sortType == 'cohort.name' && sortReverse"
                       class="fa fa-caret-up"></span>
               </a>
             </th>
@@ -51,7 +51,7 @@
               {{"(" + student.id + ")-" + student.name}}
             </td>
             <td>
-              1st
+              {{student.cohort.name}}
             </td>
             <td>
               <div class="switch">
@@ -106,8 +106,7 @@
                   disabled>
         </label>
         <label>Cohort
-          <select ng-model="student.cohort"
-                  ng-required="true"
+          <select ng-model="student.cohort_id"
                   ng-options="cohort.id as cohort.name for cohort in cohorts"
                   class="input-with-append"
                   ng-show="!showAddNewCohort">
@@ -116,7 +115,6 @@
           <input type="text"
             ng-model="student.cohort.name"
             placeholder="Cohort Name"
-            ng-required="true"
             ng-show="showAddNewCohort"
             class="input-with-append"/>
           <a href="javascript:;" ng-click="revealAddNewCohort()"

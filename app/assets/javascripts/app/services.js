@@ -21,6 +21,7 @@ angular.module('myApp.services', ['ngResource'])
     return $resource("cohorts/:id", {id: "@id"},
       {
         'create': {method: 'POST'},
+        'show': { method: 'GET', isArray: false },
         'index': {method: 'GET'},
         'update': {method: 'PUT'}
       }

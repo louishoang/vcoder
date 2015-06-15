@@ -3,7 +3,7 @@ class StudentsController < ApplicationController
   respond_to :json
 
   def index
-    @students = User.all
+    @students = Student.all
     render status: 200,
           json: {
             students: @students
@@ -11,10 +11,11 @@ class StudentsController < ApplicationController
   end
 
   def create
-    binding.pry
     @student = Student.new(user_params)
-    if params[:cohort].present? && params[:cohort][:name].present?
-      @cohort = Cohort.new()
+    if params[:cohort].is_a?(Hash)
+      @cohort = Cohort.new(cohort_params)
+      @cohort.save; @cohort.reload
+      @student.cohort = @cohort
     end
     if @student.save
       render status: 200,
@@ -48,7 +49,24 @@ class StudentsController < ApplicationController
 
   private
 
+  def all_params
+    params.permit(:name, :password, :email, :is_active, :cohort_id, :cohort => [:name, :start_at, :end_at])
+  end
+
   def user_params
-    params.permit(:name, :password, :email, :is_active, :role, :cohort => [:name])
+    { name: all_params[:name],
+      password: all_params[:password],
+      email: all_params[:email],
+      is_active: all_params[:is_active],
+      cohort_id: all_params[:cohort_id]
+    }
+  end
+
+  def cohort_params
+    cohort = all_params[:cohort]
+    { name: cohort[:name],
+      start_at: cohort[:start_at],
+      end_at: cohort[:end_at]
+    }
   end
 end
