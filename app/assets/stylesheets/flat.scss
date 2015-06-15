@@ -776,3 +776,21 @@ input[disabled]{
   color: #02ACC1;
   font-weight: 500;
 }
+
+.input-with-append{
+  width: 90% !important;
+  display: inline !important;
+}
+
+.fa-action{
+  opacity: 0.3;
+}
+
+.fa-action:hover{
+  opacity: 1;
+}
+
+.form-link{
+  text-decoration: none;
+  color: black;
+}

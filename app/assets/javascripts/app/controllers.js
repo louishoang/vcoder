@@ -27,11 +27,11 @@ angular.module("myApp.controllers",[])
     $scope.notifications = FirebaseAnnouncement.announcements;
   }])
   .controller("StudentsController",
-             ["$scope", "Student", "PaginationService",
-              function($scope, Student, PaginationService){
+             ["$scope", "Student", "PaginationService", "Cohort",
+              function($scope, Student, PaginationService, Cohort){
 
     PaginationService($scope, 'Student');
-
+    // Student resources
     Student.index(function(resp){
       $scope.students = resp.students;
       $scope.pageCount = Math.ceil($scope.students.length / $scope.itemsPerPage);
@@ -54,6 +54,17 @@ angular.module("myApp.controllers",[])
     $scope.changeStatus = function(stud){
       Student.update(stud);
     };
+
+    //Cohort resources
+    Cohort.index(function(resp){
+      $scope.cohorts = resp.cohorts;
+    });
+
+    $scope.showAddNewCohort = false;
+
+    $scope.revealAddNewCohort = function(){
+      $scope.showAddNewCohort = !$scope.showAddNewCohort;
+    }
 
   }])
   .controller("AnnouncementController",

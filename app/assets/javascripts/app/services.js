@@ -17,6 +17,15 @@ angular.module('myApp.services', ['ngResource'])
     };
     return service;
   })
+  .factory("Cohort", ["$resource", function($resource){
+    return $resource("cohorts/:id", {id: "@id"},
+      {
+        'create': {method: 'POST'},
+        'index': {method: 'GET'},
+        'update': {method: 'PUT'}
+      }
+    );
+  }])
   .factory("Student", ["$resource", function($resource){
     return $resource("/students/:id", {id: "@id"},
       {

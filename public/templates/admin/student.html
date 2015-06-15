@@ -107,11 +107,25 @@
         </label>
         <label>Cohort
           <select ng-model="student.cohort"
-                  ng-required="true">
-            <option value="">Please choose cohort</option>
-            <option value="July">July</option>
-            <option value="August">August</option>
+                  ng-required="true"
+                  ng-options="cohort.id as cohort.name for cohort in cohorts"
+                  class="input-with-append"
+                  ng-show="!showAddNewCohort">
+            <option value="">Choose a cohort</option>
           </select>
+          <input type="text"
+            ng-model="student.cohort.name"
+            placeholder="Cohort Name"
+            ng-required="true"
+            ng-show="showAddNewCohort"
+            class="input-with-append"/>
+          <a href="javascript:;" ng-click="revealAddNewCohort()"
+            class="form-link">
+            <i class="fa fa-lg fa-pencil icon-space fa-action"
+              ng-show="!showAddNewCohort"></i>
+            <i class="fa fa-times fa-lg icon-space icon-space-right fa-action"
+              ng-show="showAddNewCohort"></i>
+          </a>
         </label>
         <button type="submit"
                 class="button small radius"
