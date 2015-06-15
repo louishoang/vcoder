@@ -11,7 +11,11 @@ class StudentsController < ApplicationController
   end
 
   def create
+    binding.pry
     @student = Student.new(user_params)
+    if params[:cohort].present? && params[:cohort][:name].present?
+      @cohort = Cohort.new()
+    end
     if @student.save
       render status: 200,
               json: {
@@ -45,6 +49,6 @@ class StudentsController < ApplicationController
   private
 
   def user_params
-    params.permit(:name, :password, :email, :is_active, :role)
+    params.permit(:name, :password, :email, :is_active, :role, :cohort => [:name])
   end
 end

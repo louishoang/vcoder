@@ -121,12 +121,37 @@
             class="input-with-append"/>
           <a href="javascript:;" ng-click="revealAddNewCohort()"
             class="form-link">
-            <i class="fa fa-lg fa-pencil icon-space fa-action"
+            <i class="fa fa-lg fa-plus-circle icon-space cl-green"
               ng-show="!showAddNewCohort"></i>
-            <i class="fa fa-times fa-lg icon-space icon-space-right fa-action"
+            <i class="fa fa-times fa-lg icon-space cl-orange"
               ng-show="showAddNewCohort"></i>
           </a>
         </label>
+        <div class="small-12 large-12 columns nopadding"
+            ng-show="showAddNewCohort">
+          <div class="small-12 large-6 columns nopadding">
+            <label>Cohort Start Date
+              <date-picker
+                class="date-picker"
+                placeholder="Start Date"
+                ng-model="student.cohort.start_at"
+                not-after="student.cohort.end_at"
+                format="dd-MM-yy"
+                autohide=true/></date-picker>
+            </label>
+          </div>
+          <div class="small-12 large-6 columns nopadding">
+            <label>Cohort End Date
+              <date-picker
+                class="date-picker"
+                placeholder="End Date"
+                ng-model="student.cohort.end_at"
+                not-before="student.cohort.start_at"
+                format="dd-MM-yy"
+                autohide=true/></date-picker>
+            </label>
+          </div>
+        </div>
         <button type="submit"
                 class="button small radius"
                 ng-disabled="!newStudentForm.$valid"

@@ -7,7 +7,8 @@ angular.module('myApp',
                'myApp.directives',
                'pageslide-directive',
                'ng-rails-csrf',
-               'firebase'])
+               'firebase',
+               'bzm-date-picker'])
   .config(function($routeProvider){
     $routeProvider.when('/', {
       templateUrl: '/templates/dashboard.html',

@@ -782,15 +782,20 @@ input[disabled]{
   display: inline !important;
 }
 
-.fa-action{
-  opacity: 0.3;
-}
-
-.fa-action:hover{
-  opacity: 1;
-}
-
 .form-link{
   text-decoration: none;
   color: black;
+}
+
+.date-picker .date-display .date-input{
+  width: 90%;
+  border: 1px solid #cccccc;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.75);
+  line-height: normal;
+  border-radius: 0;
+  height: 2.5625rem;
+  margin-bottom: 10px;
 }
